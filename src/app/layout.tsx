@@ -33,11 +33,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       
-      <HomePage/>
+      
         <LoginPage/>
-        <DashboardLayout>  
+        
           {children}
-        </DashboardLayout>
+        
       </body>
     </html>
   );
