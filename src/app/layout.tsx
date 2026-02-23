@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/dashboard/sidebar";
 import Navbar from "@/components/dashboard/navbar";
 import DashboardLayout from "./dashboard/layout";
 import HomePage from "./page";
-import LoginPage from "./auth/login/page";
-import NextNodeServer from "next/dist/server/next-server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +32,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
       
-      <HomePage/>
       
-        <LoginPage/>
+      
+        
         
           {children}
+          <HomePage/>
         
       </body>
     </html>
